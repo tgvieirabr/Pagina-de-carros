@@ -95,8 +95,8 @@ nav ul button:hover {
   height: 450px;
   background: var(--blue);
   border-radius: 8px;
-  box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 8px 8px 10px 8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 10;
@@ -120,16 +120,16 @@ nav ul button:hover {
   color: white;
   margin-bottom: 20px;
   text-align: right;
-  transform: translateX(-20px);
-  transition: transform 0.5s;
+  transform: translateX(-40px);
+  transition: transform 0.9s;
 }
 
 .header-block .text p {
   max-width: 280px;
   color: white;
   text-align: right;
-  transform: translateX(-20px);
-  transition: transform 0.4s;
+  transform: translateX(-40px);
+  transition: transform 0.8s;
 }
 
 /* Product Catalog */
@@ -149,20 +149,24 @@ section .filter-card {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
 }
 
 .search-input {
   width: 700px;
-  height: 50px;
+  height: 60px;
   border: none;
-  border-radius: 4px 0px 0px 4px;
-  text-indent: 10px;
+  border-radius: 8px 0px 0px 8px;
+  text-indent: 20px;
+  font-size: 20px;
+
+
 }
 
 .search-button {
   width: 150px;
-  height: 50px;
-  border-radius: 0px 4px 4px 0px;
+  height: 60px;
+  border-radius: 0px 8px 8px 0px;
   border: none;
   background: var(--blue);
   color: white;
@@ -177,7 +181,15 @@ section .filter-card {
 }
 
 .title-wrapper-catalog {
-  margin-top: 200px;
+  margin-top: 120px;
+  padding-bottom: 30px;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.title-wrapper-catalog h3 {
+  font-size: 1.5em;
   padding-bottom: 20px;
 }
 
@@ -241,118 +253,11 @@ section .card-item {
   color: var(--blue);
 }
 
-/* About */
-
-.about {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 10px;
-}
-
-.about-content {
-  max-width: 1000px;
-  min-width: 300px;
-  height: 600px;
-  background: #dedede3b;
-  margin: 0 auto;
-  border-radius: 8px;
-  z-index: 10;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.left {
-  width: 25%;
-  min-width: 300px;
-  height: 100%;
-  background: #000000a1;
-  border-radius: 8px;
-}
-
-.right {
-  width: 65%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding-top: 10%;
-}
-
-.right h3 {
-  text-align: right;
-  width: 90%;
-  margin-bottom: 20px;
-}
-
-.right p {
-  max-width: 90%;
-  font-size: 1em;
-  letter-spacing: 2px;
-  text-align: right;
-  color: rgba(0, 0, 0, 0.4);
-}
-
-/* Features */
-.features {
-  width: 100%;
-  height: 100%;
-  background: var(--gray);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 0px;
-}
-
-.title-wrapper-features {
-  padding: 20px 0px;
-}
-
-.feature-card-block {
-  max-width: 1000px;
-  min-width: 300px;
-  height: 600px;
-  background: white;
-  margin: 0 auto;
-  border-radius: 8px;
-  z-index: 10;
-  padding: 50px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-  grid-gap: 30px;
-}
-
-.feature-card-item {
-  max-width: 420px;
-  height: 150px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  border: 1px solid #dedede3b;
-  border-radius: 4px;
-}
-
-.feature-text-content {
-  max-width: 60%;
-  margin: 5px;
-}
-
-.feature-card-item img {
-  width: 64px;
-  height: 64px;
-}
-
 /* Footer */
 footer {
   width: 100%;
   height: 250px;
+  padding-top: 30px;
 }
 
 footer .main {
@@ -378,6 +283,8 @@ footer .main {
   color: white;
   height: 100%;
   min-height: 100px;
+  line-height: 20px;
+  font-size: 1.3em;
 }
 
 .footer-links h4 {
@@ -401,9 +308,10 @@ footer .last {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
 }
 
-/* Responsive adjustments */
+/* Mobile */
 
 @media (max-width: 576px) {
   nav ul li {
@@ -438,40 +346,7 @@ footer .last {
     min-width: 80px;
   }
 
-  .about {
-    margin-top: 100px;
-  }
 
-  .title-wrapper-about {
-    margin-bottom: 20px;
-  }
-  .about-content {
-    flex-direction: column;
-    height: 100%;
-  }
-  .left {
-    display: none;
-  }
-  .right {
-    width: 90%;
-  }
-
-  .right p {
-    width: 100%;
-    margin: 0px;
-    text-align: left;
-  }
-
-  .features {
-    height: 100%;
-  }
-
-  .feature-card-block {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
   footer {
     height: 100%;
   }
